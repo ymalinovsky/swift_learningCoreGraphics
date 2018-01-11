@@ -24,10 +24,28 @@
                                     <constraint firstAttribute="width" constant="100" id="DEB-iL-AuA"/>
                                     <constraint firstAttribute="height" constant="100" id="cke-ff-OX7"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49B-Ax-2kE" customClass="PushButton" customModule="learningCoreGraphics" customModuleProvider="target">
+                                <rect key="frame" x="162" y="513.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Q4t-YX-IqE"/>
+                                    <constraint firstAttribute="height" constant="50" id="dOO-ap-JM2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.3411764706" green="0.85490196080000003" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="49B-Ax-2kE" firstAttribute="top" secondItem="Paq-Hn-tNl" secondAttribute="bottom" constant="20" id="BGu-9e-Rwn"/>
+                            <constraint firstItem="49B-Ax-2kE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bla-KP-KIc"/>
                             <constraint firstItem="Paq-Hn-tNl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="100" id="WWb-O8-0QC"/>
                             <constraint firstItem="Paq-Hn-tNl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fNQ-Li-VAE"/>
                         </constraints>
@@ -36,6 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="194" y="63"/>
         </scene>
     </scenes>
 </document>

@@ -23,10 +23,13 @@ import UIKit
     private var halfHeight: CGFloat {
         return bounds.height / 2
     }
+    
+    @IBInspectable var fillColor: UIColor = UIColor.green
+    @IBInspectable var isAddButton: Bool = true
 
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(ovalIn: rect)
-        UIColor.green.setFill()
+        fillColor.setFill()
         path.fill()
         
         //set up the width and height variables
@@ -42,23 +45,16 @@ import UIKit
         
         //move the initial point of the path
         //to the start of the horizontal stroke
-        plusPath.move(to: CGPoint(
-            x: halfWidth - halfPlusWidth + Constants.halfPointShift,
-            y: halfHeight + Constants.halfPointShift))
+        plusPath.move(to: CGPoint( x: halfWidth - halfPlusWidth + Constants.halfPointShift, y: halfHeight + Constants.halfPointShift))
         
         //add a point to the path at the end of the stroke
-        plusPath.addLine(to: CGPoint(
-            x: halfWidth + halfPlusWidth + Constants.halfPointShift,
-            y: halfHeight + Constants.halfPointShift))
+        plusPath.addLine(to: CGPoint(x: halfWidth + halfPlusWidth + Constants.halfPointShift, y: halfHeight + Constants.halfPointShift))
         
-        //Vertical Line
-        plusPath.move(to: CGPoint(
-            x: halfWidth + Constants.halfPointShift,
-            y: halfHeight - halfPlusWidth + Constants.halfPointShift))
-        
-        plusPath.addLine(to: CGPoint(
-            x: halfWidth + Constants.halfPointShift,
-            y: halfHeight + halfPlusWidth + Constants.halfPointShift))
+        if isAddButton {
+            //Vertical Line
+            plusPath.move(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight - halfPlusWidth + Constants.halfPointShift))
+            plusPath.addLine(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight + halfPlusWidth + Constants.halfPointShift))
+        }
         
         //set the stroke color
         UIColor.white.setStroke()
